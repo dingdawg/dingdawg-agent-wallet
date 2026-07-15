@@ -1,0 +1,62 @@
+{
+  "name": "dingdawg-agent-wallet",
+  "version": "1.0.7",
+  "mcpName": "io.github.dingdawg/agent-wallet",
+  "description": "Governance receipts for AI agents — USDC payment governance layer with OFAC screening, policy gates, spend caps, and Ed25519-signed audit receipts. Governance only: your agent executes transfers, DingDawg governs whether they are allowed.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dingdawg/agent-wallet-demo"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "dingdawg-agent-wallet": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npx ts-node --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' tests/scenario_forge.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai-agent",
+    "wallet",
+    "coinbase",
+    "agentkit",
+    "x402",
+    "governance",
+    "compliance",
+    "mcp",
+    "usdc",
+    "stablecoin",
+    "autonomous-agent",
+    "governance-receipts",
+    "receipts",
+    "audit-trail",
+    "tamper-proof",
+    "ai-governance",
+    "responsible-ai",
+    "llm-governance",
+    "signed-receipts",
+    "ai-agents",
+    "eu-ai-act",
+    "model-context-protocol"
+  ],
+  "author": "DingDawg Enterprise <hello@dingdawg.com>",
+  "license": "BUSL-1.1",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
